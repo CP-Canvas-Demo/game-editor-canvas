@@ -1,0 +1,14 @@
+instructions: |
+  This is a TypeScript Phaser browser game. Keep authored level definitions JSON-compatible
+  so they remain usable by the planned Canvas level editor.
+
+scripts:
+  - name: Setup
+    command: npm ci
+    triggers:
+      - session.create
+  - name: Run game
+    command: npm run dev -- --host 127.0.0.1
+
+server_ready_pattern: '(?i)Local:\s+(https?://\S+)'
+auto_open_in_browser: true

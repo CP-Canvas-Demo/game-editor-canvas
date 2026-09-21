@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Neon Trail level editor</title>
+    <link rel="stylesheet" href="./editor.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-main">
+        <h1 id="title">Level editor</h1>
+        <span id="filepath" class="file"></span>
+      </div>
+      <div class="topbar-actions">
+        <span id="dirty" class="badge badge-clean">Saved</span>
+        <button id="revert" class="btn" type="button">Revert</button>
+        <button id="save" class="btn btn-primary" type="button">Save to repo</button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="panel levels">
+        <div class="panel-head">
+          <h2>Levels</h2>
+          <button id="new-level" class="btn btn-small" type="button">New</button>
+        </div>
+        <ul id="level-list" class="level-list"></ul>
+        <p class="hint">Listed in campaign order. Use the arrows to reorder.</p>
+      </aside>
+
+      <main class="stage">
+        <div class="toolbar" id="toolbar"></div>
+        <div class="canvas-wrap">
+          <canvas id="grid"></canvas>
+        </div>
+        <div class="statusline">
+          <span id="cursor" class="mono">–</span>
+          <span id="tool-hint"></span>
+        </div>
+      </main>
+
+      <aside class="panel inspector">
+        <section class="group">
+          <h2>Level</h2>
+          <div class="field"><label for="f-id">Id</label><input id="f-id" type="text" /></div>
+          <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" /></div>
+          <div class="field"><label for="f-subtitle">Subtitle</label><input id="f-subtitle" type="text" /></div>
+          <div class="field-row">
+            <div class="field"><label for="f-width">Width</label><input id="f-width" type="number" min="6" max="64" /></div>
+            <div class="field"><label for="f-height">Height</label><input id="f-height" type="number" min="6" max="48" /></div>
+          </div>
+          <div class="field"><label for="f-speed">Tick speed (ms)</label><input id="f-speed" type="number" min="60" max="600" /></div>
+          <label class="check"><input id="f-firstperson" type="checkbox" /> First-person view enabled</label>
+        </section>
+
+        <section class="group">
+          <h2>Objective</h2>
+          <div class="field">
+            <label for="f-objective-type">Type</label>
+            <select id="f-objective-type">
+              <option value="score">Reach a score</option>
+              <option value="collect">Collect food</option>
+              <option value="clear-crystals">Clear crystals</option>
+            </select>
+          </div>
+          <div class="field"><label for="f-objective-target">Target</label><input id="f-objective-target" type="number" min="1" /></div>
+          <div class="field" id="objective-food-field">
+            <label for="f-objective-food">Food</label>
+            <select id="f-objective-food"></select>
+          </div>
+          <label class="check"><input id="f-objective-fp" type="checkbox" /> Requires first-person</label>
+        </section>
+
+        <section class="group">
+          <h2>Selection</h2>
+          <div id="selection"><p class="hint">Pick the Select tool and click something on the grid.</p></div>
+        </section>
+
+        <section class="group">
+          <h2>Spawn rules</h2>
+          <div id="spawns"></div>
+        </section>
+
+        <section class="group">
+          <h2>Food</h2>
+          <div id="food"></div>
+        </section>
+
+        <section class="group">
+          <h2 id="issues-heading">Validation</h2>
+          <ul id="issues" class="issues"></ul>
+        </section>
+      </aside>
+    </div>
+
+    <script type="module" src="./editor.js"></script>
+  </body>
+</html>

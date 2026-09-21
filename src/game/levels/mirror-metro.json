@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "id": "mirror-metro",
+  "name": "Mirror Metro",
+  "subtitle": "Find the bright way through",
+  "grid": { "width": 24, "height": 15 },
+  "speedMs": 135,
+  "firstPersonEnabled": true,
+  "initialSnake": [
+    { "x": 5, "y": 12 },
+    { "x": 4, "y": 12 },
+    { "x": 3, "y": 12 }
+  ],
+  "obstacles": [
+    { "id": "spine-0", "kind": "wall", "position": { "x": 12, "y": 4 } },
+    { "id": "spine-1", "kind": "wall", "position": { "x": 12, "y": 5 } },
+    { "id": "spine-2", "kind": "wall", "position": { "x": 12, "y": 6 } },
+    { "id": "spine-3", "kind": "wall", "position": { "x": 12, "y": 8 } },
+    { "id": "spine-4", "kind": "wall", "position": { "x": 12, "y": 9 } },
+    { "id": "spine-5", "kind": "wall", "position": { "x": 12, "y": 10 } },
+    { "id": "crystal-a", "kind": "crystal", "position": { "x": 18, "y": 4 }, "breakableInFirstPerson": true },
+    { "id": "crystal-b", "kind": "crystal", "position": { "x": 18, "y": 5 }, "breakableInFirstPerson": true },
+    { "id": "crystal-c", "kind": "crystal", "position": { "x": 18, "y": 6 }, "breakableInFirstPerson": true }
+  ],
+  "enemies": [
+    { "id": "wobble", "kind": "roller", "position": { "x": 7, "y": 4 }, "edibleAfterFood": "prism" },
+    { "id": "fizz", "kind": "glitch", "position": { "x": 19, "y": 10 }, "edibleAfterFood": "pulse" }
+  ],
+  "food": [
+    { "id": "spark", "kind": "spark", "color": 16768842, "growth": 1, "score": 50, "rarity": 1 },
+    { "id": "prism", "kind": "prism", "color": 3598079, "growth": 2, "score": 120, "rarity": 0.7 },
+    { "id": "pulse", "kind": "pulse", "color": 16732120, "growth": 3, "score": 220, "rarity": 0.35 },
+    { "id": "nova", "kind": "nova", "color": 10320895, "growth": 4, "score": 400, "rarity": 0.15, "firstPersonOnly": true }
+  ],
+  "spawns": [
+    { "foodId": "spark", "weight": 4, "maxActive": 2, "intervalMs": 1700 },
+    { "foodId": "prism", "weight": 3, "maxActive": 1, "intervalMs": 2500 },
+    { "foodId": "pulse", "weight": 2, "maxActive": 1, "intervalMs": 3600 },
+    { "foodId": "nova", "weight": 1, "maxActive": 1, "intervalMs": 5200 }
+  ],
+  "objective": { "type": "clear-crystals", "target": 3, "requiresFirstPerson": true }
+}

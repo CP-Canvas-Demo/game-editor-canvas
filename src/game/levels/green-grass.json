@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "id": "green-grass",
+  "name": "Green Grass",
+  "subtitle": "Untitled signal",
+  "grid": { "width": 24, "height": 20 },
+  "speedMs": 150,
+  "firstPersonEnabled": true,
+  "initialSnake": [
+    { "x": 5, "y": 7 },
+    { "x": 4, "y": 7 },
+    { "x": 3, "y": 7 }
+  ],
+  "obstacles": [
+    { "id": "wall-1", "kind": "wall", "position": { "x": 3, "y": 4 } },
+    { "id": "wall-2", "kind": "wall", "position": { "x": 4, "y": 4 } },
+    { "id": "wall-3", "kind": "wall", "position": { "x": 5, "y": 4 } },
+    { "id": "wall-4", "kind": "wall", "position": { "x": 6, "y": 4 } },
+    { "id": "wall-5", "kind": "wall", "position": { "x": 7, "y": 4 } },
+    { "id": "wall-6", "kind": "wall", "position": { "x": 8, "y": 4 } },
+    { "id": "wall-7", "kind": "wall", "position": { "x": 9, "y": 4 } },
+    { "id": "wall-8", "kind": "wall", "position": { "x": 9, "y": 5 } },
+    { "id": "wall-9", "kind": "crystal", "position": { "x": 9, "y": 6 }, "breakableInFirstPerson": true },
+    { "id": "wall-10", "kind": "crystal", "position": { "x": 9, "y": 7 }, "breakableInFirstPerson": true },
+    { "id": "wall-11", "kind": "crystal", "position": { "x": 9, "y": 8 }, "breakableInFirstPerson": true },
+    { "id": "wall-12", "kind": "wall", "position": { "x": 9, "y": 9 } },
+    { "id": "wall-13", "kind": "wall", "position": { "x": 9, "y": 10 } },
+    { "id": "wall-14", "kind": "wall", "position": { "x": 8, "y": 10 } },
+    { "id": "wall-15", "kind": "wall", "position": { "x": 7, "y": 10 } },
+    { "id": "wall-16", "kind": "wall", "position": { "x": 5, "y": 10 } },
+    { "id": "wall-17", "kind": "wall", "position": { "x": 6, "y": 10 } },
+    { "id": "wall-18", "kind": "wall", "position": { "x": 4, "y": 10 } },
+    { "id": "wall-19", "kind": "wall", "position": { "x": 3, "y": 10 } }
+  ],
+  "enemies": [
+    {
+      "id": "roller-1",
+      "kind": "roller",
+      "position": { "x": 14, "y": 2 },
+      "patrol": [
+        { "x": 14, "y": 2 },
+        { "x": 14, "y": 10 }
+      ]
+    },
+    {
+      "id": "roller-2",
+      "kind": "roller",
+      "position": { "x": 15, "y": 2 },
+      "patrol": [
+        { "x": 15, "y": 2 },
+        { "x": 15, "y": 3 },
+        { "x": 15, "y": 4 },
+        { "x": 15, "y": 5 },
+        { "x": 15, "y": 6 },
+        { "x": 15, "y": 7 },
+        { "x": 15, "y": 8 },
+        { "x": 15, "y": 9 },
+        { "x": 15, "y": 10 }
+      ]
+    }
+  ],
+  "food": [
+    { "id": "spark", "kind": "spark", "color": 16768842, "growth": 1, "score": 50, "rarity": 1 },
+    { "id": "prism", "kind": "prism", "color": 3598079, "growth": 2, "score": 120, "rarity": 0.7 },
+    { "id": "nova", "kind": "nova", "color": 10320895, "growth": 4, "score": 400, "rarity": 0.15, "firstPersonOnly": true },
+    { "id": "grass", "kind": "pulse", "color": 6724661, "growth": 2, "score": 50, "rarity": 1 }
+  ],
+  "spawns": [
+    { "foodId": "grass", "weight": 5, "maxActive": 2, "intervalMs": 1900 },
+    { "foodId": "prism", "weight": 3, "maxActive": 1, "intervalMs": 2900 },
+    { "foodId": "spark", "weight": 1, "maxActive": 1, "intervalMs": 4500 }
+  ],
+  "objective": { "type": "score", "target": 900 }
+}
