@@ -14,29 +14,41 @@ wait for either new canvas to be created.
 
 ### 1. Visualize the game logic
 
-In a separate session, use `/create-canvas` to create a visual representation of the game's code
-logic and flow. Ask Copilot to trace a few important paths through the game and show how the
-relevant parts connect. **GPT-5.6 Luna** is a suggested smaller model for this exercise.
+In a separate session, use
+
+`--- copy below`
+
+/create-canvas create a visual representation of the code logic and flow, Diagram type: Interactive code flowchart. Show the logic as labeled nodes connected by directed arrows, with branches for decisions and source-file references on each node. Allow selecting a node to view its details.
+
+`---`
+
+**GPT-5.6 Luna** is a suggested smaller model for this exercise.
 
 ### 2. Explore the issue backlog
 
-In another separate session, use `/create-canvas` to create a simple project-level Issue Backlog
-canvas for `CP-Canvas-Demo/game-editor-canvas`. It should show live open GitHub issues in a
-searchable list with each issue's number, title, and labels. Add a **Summarize with Copilot**
-button that summarizes an issue only when clicked and displays the result in the canvas.
+In another separate session, use
+
+`--- copy below`
+
+/create-canvas to create a simple project-level Issue Backlog
+canvas. Show a list of live open GitHub issues labeled `bug`, with each issue's number and title. Add an Analyze effort to fix button for each issue.
+Only when clicked, Copilot should analyze the effort to fix that bug and return the analysis in
+chat, not in the canvas.
+
+`--- `
+
+**GPT-5.6 Luna** is a suggested smaller model for this exercise.
 
 Keep this canvas strictly read-only: it must not create or edit issues, post comments or
 reactions, change labels, or write to the repository. It must not run anything automatically
-when opened or refreshed. Follow the repository's existing canvas patterns, but leave the
-Neon Trail level-editor canvas untouched. Keep the implementation small and use the Copilot App's
-supported integration.
+when opened or refreshed. Follow the repository's existing canvas patterns.
 
-### 3. Create a level with the Neon Trail editor
+### 3. Create a level with the Neon Trail editor canvas
 
 While those sessions work, use the already-provisioned **Neon Trail level editor** canvas in the
 Copilot app to create a new level configuration file for the repo.
 
-1. Ask Copilot to open the **Neon Trail level editor** canvas.
+1. Ask Copilot to `open the Neon Trail level editor canvas`.
 2. Choose **New**, edit the grid and level details, then fix any validation messages.
 3. Select **Save to repo**.
 4. Review the new JSON file in `src/game/levels/`
