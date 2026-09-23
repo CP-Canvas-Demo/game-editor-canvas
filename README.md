@@ -2,11 +2,14 @@
 
 This repo is a small Phaser game used as a learning example. The game is only the illustration.
 
+**Prerequisite:** These exercises use the Copilot App as the example host. Add
+`CP-Canvas-Demo/game-editor-canvas` to the Copilot App, then start a session for the repository.
+
 ## Canvas exercises
 
-Try these two canvas exercises in **separate Copilot sessions** so each can work independently.
-After starting them, return to this session and explore the built-in Neon Trail level editor
-below while the other sessions work. The level editor is already available; you do not need to
+Start the first two canvas exercises in **separate Copilot sessions** so each can work
+independently. Then return to this session and do exercise 3 with the built-in Neon Trail level
+editor while the other sessions work. The level editor is already available; you do not need to
 wait for either new canvas to be created.
 
 ### 1. Visualize the game logic
@@ -28,7 +31,7 @@ when opened or refreshed. Follow the repository's existing canvas patterns, but 
 Neon Trail level-editor canvas untouched. Keep the implementation small and use the Copilot App's
 supported integration.
 
-## Learning objective
+### 3. Create a level with the Neon Trail editor
 
 While those sessions work, use the already-provisioned **Neon Trail level editor** canvas in the
 Copilot app to create a new level configuration file for the repo.
