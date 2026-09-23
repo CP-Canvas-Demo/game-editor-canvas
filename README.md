@@ -22,11 +22,11 @@ In a separate session, use
 
 `---`
 
-**GPT-5.6 Luna** is a suggested smaller model for this exercise.
+**GPT-5.6 Luna** is a suggested smaller model for this exercise. The prompt is open ended, so results will be different across attempts and models. See example [output](game-flow-canvas.png)
 
 ### 2. Explore the issue backlog
 
-In another separate session, use
+In another separate session, use the below prompt, try it both in Autopilot and with Plan mode.
 
 `--- copy below`
 
@@ -37,7 +37,7 @@ chat, not in the canvas.
 
 `--- `
 
-**GPT-5.6 Luna** is a suggested smaller model for this exercise.
+**GPT-5.6 Luna** is a suggested smaller model for this exercise. The prompt is open ended, so results will be different across attempts and models. See example [output](issue-backlog.png)
 
 Keep this canvas strictly read-only: it must not create or edit issues, post comments or
 reactions, change labels, or write to the repository. It must not run anything automatically
